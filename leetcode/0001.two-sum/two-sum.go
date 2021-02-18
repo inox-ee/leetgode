@@ -17,3 +17,15 @@ func twoSum(nums []int, target int) []int {
 	}
 	return result
 }
+
+func twoSum2(nums []int, target int) []int {
+	var refNums map[int]int
+	for i, v := range nums {
+		var candVal = target - v
+		if j, ok := refNums[candVal]; ok {
+			return []int{j, i}
+		}
+		refNums[v] = i
+	}
+	return nil
+}
