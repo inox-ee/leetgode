@@ -18,6 +18,7 @@ func twoSum(nums []int, target int) []int {
 	return result
 }
 
+/*
 func twoSum2(nums []int, target int) []int {
 	var refNums map[int]int
 	for i, v := range nums {
@@ -29,3 +30,4 @@ func twoSum2(nums []int, target int) []int {
 	}
 	return nil
 }
+*/
