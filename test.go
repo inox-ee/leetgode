@@ -47,37 +47,5 @@ func readString(input string) {
 	}
 }
 
-func lengthOfLongestSubstring(s string) int {
-	var location [256]int // ASCII文字コードが 256 なので (普通にmapにしても良いが、場合分けが若干面倒。found/not found ではなく、インデックスとの大小比較がしたいので。)
-
-	maxLen, left, right := 0, 0, 0
-
-	for left < len(s) {
-		if right+1 < len(s) && location[s[right+1]-'a'] <= 0 {
-			location[s[right+1]-'a']++
-			right++
-		} else {
-			location[s[left]-'a']--
-			left++
-		}
-		maxLen = max(maxLen, right-left+1)
-	}
-	return maxLen
-}
-
-func max(a int, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func main() {
-	println(lengthOfLongestSubstring("abcabacbb"))
-	println(lengthOfLongestSubstring("pwwkew"))
-	println(lengthOfLongestSubstring("pwwke"))
-	println(lengthOfLongestSubstring("au"))
-	println(lengthOfLongestSubstring("bbbbbb"))
-	println(lengthOfLongestSubstring(" "))
-	println(lengthOfLongestSubstring(""))
 }

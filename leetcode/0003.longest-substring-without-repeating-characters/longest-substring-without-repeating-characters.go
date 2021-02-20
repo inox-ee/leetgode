@@ -30,27 +30,25 @@ func lengthOfLongestSubstring(s string) int {
 	return max
 }
 
-func lengthOfLongestSubstring_(s string) int {
-	var location [256]int // ASCII文字コードが 256 なので (普通にmapにしても良いが、場合分けが若干面倒。found/not found ではなく、インデックスとの大小比較がしたいので。)
+// func lengthOfLongestSubstring_(s string) int {
+// 	var mp = make(map[string]int)  // ASCII 文字コードに対応して [256]int でも良いが、存在判定がやや面倒なのでこれでよさそう
+// 	str := strings.Split(s, "")
 
-	maxLen, left, right := 0, 0, 0
+// 	maxLen, left, right := 0, 0, 0
+// 	for right < len(s) {
+// 		if v, ok := mp[str[right]]; ok {
+// 			left = max_(v+1, left)
+// 		}
+// 		maxLen = max_(maxLen, right-left+1)
+// 		mp[str[right]] = right
+// 		right++
+// 	}
+// 	return maxLen
+// }
 
-	for left < len(s) {
-		if right+1 < len(s) && location[s[right+1]-'a'] <= 0 {
-			location[s[right+1]-'a']++
-			right++
-		} else {
-			location[s[left]-'a']--
-			left++
-		}
-		maxLen = max_(maxLen, right-left+1)
-	}
-	return maxLen
-}
-
-func max_(a int, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
+// func max_(a int, b int) int {
+// 	if a > b {
+// 		return a
+// 	}
+// 	return b
+// }
