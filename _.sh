@@ -13,17 +13,22 @@ leetgode () {
                 return
         fi
         {
-                mkdir -p -p "./leetcode/$1.$2"
-                cd $_
-                touch "$2.go"
-                curl -LO "https://raw.githubusercontent.com/aQuaYi/LeetCode-in-Go/master/Algorithms/$1.$2/$2_test.go"
-                echo "create $1.$2/$2.go, $2_test.go"
+                local response=$(curl -LOf -w '%{http_code}\n' "https://raw.githubusercontent.com/aQuaYi/LeetCode-in-Go/master/Algorithms/$1.$2/$2_test.go")
+                if [ $response -eq 200 ]; then
+                        mkdir -p "./leetcode/$1.$2"
+                        mv ./$2_test.go $_/
+                        cd $_
+                        touch "$2.go" && touch "README.md" && echo "create $1.$2/$2.go, $2_test.go"
+                else
+                        throw "CurlError"
+                fi
         } always {
-                if catch '*'
-                then
-                        case $CAUGHT in
-                                (*) echo "error" ;;
-                        esac
+                if catch '*'; then
+                case $CAUGHT in
+                        (*)
+                        echo $CAUGHT
+                        ;;
+                esac
                 fi
         }
         return
