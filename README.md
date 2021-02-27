@@ -15,3 +15,4 @@
 | 2021/02/23 | 0006    | ZigZag Conversion      | Medium | 30 min | Accepted 24 ms 6.9 MB       |
 | 2021/02/24 | 0008    | Sign to Integer (atoi) | Medium | 1 hour | Accepted 4 ms 2.7 MB        |
 | 2021/02/25 | 0020    | Valid Parentheses      | Easy   | 10 min | Accepted 0 ms 2 MB          |
+| 2021/02/26 | 0022    | Generate Parentheses   | Medium | 15 min |                             |
