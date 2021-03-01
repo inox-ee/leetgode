@@ -1,5 +1,9 @@
 package problem0022
 
+func generateParenthesis(n int) []string {
+	return []string{}
+}
+
 /*
 func generateParenthesis(n int) []string {
 	var ans []string
