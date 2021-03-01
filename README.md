@@ -16,3 +16,4 @@
 | 2021/02/24 | 0008    | Sign to Integer (atoi) | Medium | 1 hour | Accepted 4 ms 2.7 MB        |
 | 2021/02/25 | 0020    | Valid Parentheses      | Easy   | 10 min | Accepted 0 ms 2 MB          |
 | 2021/02/26 | 0022    | Generate Parentheses   | Medium | 15 min |                             |
+| 2021/03/01 | 0031    | Next Permutation       | Medium | 1 hour | Wrong Answer N/A N/A        |
