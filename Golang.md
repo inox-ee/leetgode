@@ -85,3 +85,18 @@ arr  = [1, 2, 10, 4, 5]
 となる。
 */
 ```
+
+### 比較
+
+固定長配列の比較は `a == b` で可能だが、slice はそうではない。
+`import "reflect"` から `reflect.DeepEqual(a, b)` とする。(-> [docs](https://golang.org/pkg/reflect/#DeepEqual))
+なお順序も比較対象なので注意。
+
+## スライスのソート
+
+<https://pepese.github.io/blog/golang-sort/> がよくまとまっていた。
+
+基本的に `sort.Sort()` は、第一引数に `interface` を、第二引数に `less function`[^less-func] を与える。
+なお Slice や IntSlice など、代表的なソート対象はもとから用意されているものも多いので [docs](https://golang.org/pkg/sort/) を調べてみることをすすめる。
+
+[^less-func]: `less` って何？

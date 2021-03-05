@@ -19,3 +19,4 @@
 | 2021/03/01 | 0031    | Next Permutation               | Medium | 1 hour | Wrong Answer N/A N/A        |
 | 2021/03/02 | 0033    | Search in Rotated Sorted Array | Medium | 1 hour | Accepted 0 ms 2.7 MB        |
 | 2021/03/05 | 0035    | Search Insert Position         | Easy   | 15 min | Accepted 4 ms 3.1 MB        |
+| 2021/03/05 | 0039    | Combination Sum                | Medium | 1 hour | Wrong Answer N/A N/A        |
