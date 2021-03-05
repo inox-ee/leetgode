@@ -16,7 +16,7 @@ func recur(candidates, tmp []int, left int, ans *[][]int) {
 			return
 		} else if v < left {
 			if left >= 2*v {
-				tmp = tmp[:len(tmp):len(tmp)] // この１行が大事！！！
+				// ! tmp = tmp[:len(tmp):len(tmp)] // この１行を入れたら通る！！！
 				recur(candidates[i:], append(tmp, v), left-v, ans)
 			}
 		} else {
