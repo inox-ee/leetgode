@@ -21,3 +21,4 @@
 | 2021/03/05 | 0035    | Search Insert Position         | Easy   | 15 min | Accepted 4 ms 3.1 MB        |
 | 2021/03/05 | 0039    | Combination Sum                | Medium | 1 hour | Wrong Answer N/A N/A        |
 | 2021/03/07 | 0046    | Permutations                   | Medium | 30 min | Wrong Answer N/A N/A        |
+| 2021/04/05 | 0049    | Group Anagrams                 | Medium | 30 min | Accepted 24 ms 8.1 MB       |

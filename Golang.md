@@ -2,8 +2,9 @@
 
 ## マップ
 
-マップは、第 1 返り値にその値を、第 2 返り値に存在するか否かを返す。
-存在しない場合、第 1 返り値は デフォルト値になるので注意。nil ではない。
+- 他言語における ハッシュ を指す。要は連想配列。
+- マップは、第 1 返り値にその値を、第 2 返り値に存在するか否かを返す。存在しない場合、第 1 返り値は デフォルト値になるので注意。nil ではない。
+- マップの value に要素を追加する際は、必ず `maoObject[key] = value` で書くこと。range の 返り値に代入してもダメっぽい。
 
 ## 繰り返し
 
@@ -30,6 +31,41 @@ ref: <https://ymotongpoo.hatenablog.com/entry/2015/02/23/165341>
    初期値 `res := bytes.Buffer()` に `res.WriteBytes(str[i])` で書き込み、`res.String()` で出力する。
 2. `Split()` を使う場合
    受け取った値は `string` 型で得られる。
+
+### rune のソート
+
+sort の標準ライブラリでは用意されていない。
+以下パクリ (<https://stackoverflow.com/questions/22688651/golang-how-to-sort-string-or-byte>)
+
+```Go
+type sortRunes []rune
+
+func (s sortRunes) Less(i, j int) bool {
+    return s[i] < s[j]
+}
+
+func (s sortRunes) Swap(i, j int) {
+    s[i], s[j] = s[j], s[i]
+}
+
+func (s sortRunes) Len() int {
+    return len(s)
+}
+
+func SortString(s string) string {
+    r := []rune(s)
+    sort.Sort(sortRunes(r))
+    return string(r)
+}
+
+func main() {
+    w1 := "bcad"
+    w2 := SortString(w1)
+
+    fmt.Println(w1)
+    fmt.Println(w2)
+}
+```
 
 ### [そもそも] Go と文字列
 
