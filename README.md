@@ -26,3 +26,4 @@
 | 2021/04/07 | 0053    | Maximum Subarray               | Medium | 30 min | Accepted 128 ms 4.3 MB      |
 | 2021/04/13 | 0062    | Unique Paths                   | Medium | 30 min | Accepted 0 ms 2.1 MB        |
 | 2021/04/14 | 0063    | Unique Paths ii                | Medium | 30 min | Accepted 0 ms 2.5 MB        |
+| 2021/04/28 | 0078    | Subsets                        | Medium | 15 min | Accepted 0 ms 2.3 MB        |
